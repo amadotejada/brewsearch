@@ -23,7 +23,7 @@ Install from the Chrome Web Store: [BrewSearch](https://chromewebstore.google.co
 
 ## Author
 
-Created by Amado Tejada - [GitHub](https://github.com/amadotejada)
+Created by [Amado Tejada](https://github.com/amadotejada)
 
 ## Acknowledgments
 
