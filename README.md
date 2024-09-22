@@ -19,7 +19,7 @@ Example: `brew google-chrome`
 
 ## Installation
 
-Install from the Chrome Web Store: [BrewSearch](https://chromewebstore.google.com/detail/brewsearch/jgjgjgjgjgjgjgjgjgjgjgjgjgjgjgjg)
+Install from the Chrome Web Store: [BrewSearch](https://chromewebstore.google.com/detail/brewsearch/jpnifknnpmljbddpninifkobmcoocddm)
 
 ## Author
 
