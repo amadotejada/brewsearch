@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
   "name": "BrewSearch",
-  "version": "0.0.1",
-  "description": "Look up Homebrew packages from the browser bar. Created by Amado Tejada.",
+  "version": "0.0.2",
+  "description": "Look up Homebrew packages from the address bar. Created by Amado Tejada.",
   "background": {
     "service_worker": "background.js"
   },
