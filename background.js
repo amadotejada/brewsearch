@@ -35,6 +35,11 @@ function escapeXml(unsafe) {
   });
 }
 
+function getInstallCommand(pkg, isCask) {
+  const command = isCask ? 'brew install --cask' : 'brew install';
+  return `${command} ${pkg.token || pkg.name}`;
+}
+
 chrome.omnibox.onInputChanged.addListener((text, suggest) => {
   if (text.length < 2) return;
 
@@ -54,11 +59,11 @@ chrome.omnibox.onInputChanged.addListener((text, suggest) => {
     suggestions = [
       ...matchedFormulae.slice(0, 5).map(f => ({
         content: FORMULAE_BASE_URL + (f.token || f.name),
-        description: `Formula: ${escapeXml(f.token || f.name)} - ${escapeXml(f.desc || 'No description available')}`
+        description: `Formula: ${escapeXml(f.token || f.name)} - ${escapeXml(f.desc || 'No description available')} ▶ ${escapeXml(getInstallCommand(f, false))}`
       })),
       ...matchedCasks.slice(0, 5).map(c => ({
         content: CASKS_BASE_URL + (c.token || c.name),
-        description: `Cask: ${escapeXml(c.token || c.name)} - ${escapeXml(c.desc || 'No description available')}`
+        description: `Cask: ${escapeXml(c.token || c.name)} - ${escapeXml(c.desc || 'No description available')} ▶ ${escapeXml(getInstallCommand(c, true))}`
       }))
     ];
   }
